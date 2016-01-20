@@ -99,13 +99,121 @@
 # end
 
 
-engine_on = true
+# engine_on = true
 
-unless engine_on
-	puts "The engine is off!" # Will not display anything since the engine is on
+# unless engine_on
+# 	puts "The engine is off!" # Will not display anything since the engine is on
+# end
+
+# if engine_on
+# 	puts "The engine is on!" 
+# end
+
+# ~~~~~~~~~~~~~~~~~~~~~Number Guessing Game~~~~~~~~~~~~~~~~~~~~~
+
+# num = rand(1..100)
+# num_guesses = 0
+
+# puts "I'm thinking of a number betweeen 1 and 100."
+
+
+# loop do
+# 	puts "Can you guess which number I'm thinking of?"
+# 	guess = gets.chomp.to_i
+# 	num_guesses += 1
+# 	if guess > num
+# 		puts "Too high!"
+# 	elsif guess < num 
+# 		puts "Too low!"
+# 	else
+# 		puts "You've got it!"
+# 	end
+# 	break if num_guesses == 5
+# end
+
+# ~~~~~~~~~~~~~~~~Lab Problem 1~~~~~~~~~~~~~~~~~~
+
+# Write a program that prints out the complete lyrics to “99 bottles of beer on the wall.”
+
+# bottles = 100
+
+# until bottles == 0
+# 	bottles -= 1
+# 	if bottles == 99
+# 		puts "#{bottles} bottles of beer on the wall, #{bottles} bottles of beer! Take one down pass it around!"
+# 	elsif bottles == 1
+# 		puts "#{bottles} bottle of beer on the wall. #{bottles} bottle of beer on the wall, #{bottles} bottle of beer! Take one down pass it around!"
+# 	elsif bottles == 0
+# 		puts "No more bottles of beer on the wall. No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall."
+# 	else 
+# 		puts "#{bottles} bottles of beer on the wall. #{bottles} bottles of beer on the wall, #{bottles} bottles of beer! Take one down pass it around!"
+# end
+# end
+
+# bottles = 99
+
+# while bottles < 100
+# 	bottles -= 1
+# 	if bottles == 99
+# 		puts "#{bottles} bottles of beer on the wall, #{bottles} bottles of beer! Take one down pass it around!"
+# 	elsif bottles < 99
+# 		puts "#{bottles} bottles of beer on the wall. #{bottles} bottles of beer on the wall, #{bottles} bottles of beer! Take one down pass it around!"
+# 	elsif bottles == 0
+# 		puts "No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall."
+# 	else break
+# end
+# end
+
+# ~~~~~~~~~~~~~~~~Lab Problem 2~~~~~~~~~~~~~~~~~~
+
+# Write a Deaf Grandma program. Whatever you say to grandma(user input) she should respond with HUH?!, SPEAK UP SONNY!, unless you shout it(type in all CAPS).
+# If you shout, she can hear you and yells back NO, NOT SINCE 1938! Grandma should shout a different year each time; random between 1930 to 1980. 
+# You can’t stop talking to grandma until you shout BYE.
+
+# 
+# response = gets.chomp
+
+# until response == "BYE"
+# 	year = rand(1930..1980)
+# 	if response == response.upcase
+# 		puts "NO NOT SINCE #{year}" 
+# 	else
+# 		puts "HUH?!, SPEAK UP SONNY!"
+# 	end
+# 	response = gets.chomp
+# end
+
+# def grandma
+# 	year = rand(1930..1980)
+# 	puts "HELLO SON! HOW ARE YOU?"
+# 	response = gets.chomp
+# 	if response == response.upcase
+# 		puts "NO NOT SINCE #{year}" 
+# 	else
+# 		puts "HUH?!, SPEAK UP SONNY!"
+# 	end
+# end
+
+# grandma
+
+# ~~~~~~~~~~~~~~~~Lab Problem 3~~~~~~~~~~~~~~~~~~
+
+
+puts "HELLO SON! WHAT'S UP?"
+response = gets.chomp
+goodbye = 0
+
+while goodbye < 2
+	year = rand(1930..1980)
+	if response == "BYE"
+		puts "WHAT?"
+		goodbye += 1
+	elsif response == response.upcase
+		puts "NO NOT SINCE #{year}"
+		goodbye -= goodbye
+	else
+		puts "HUH?!, SPEAK UP SONNY!"
+		goodbye -= goodbye
+	end
+	response = gets.chomp
 end
-
-if engine_on
-	puts "The engine is on!" 
-end
-
