@@ -170,7 +170,7 @@
 # If you shout, she can hear you and yells back NO, NOT SINCE 1938! Grandma should shout a different year each time; random between 1930 to 1980. 
 # You can’t stop talking to grandma until you shout BYE.
 
-# 
+# puts "HELLO SON! HOW ARE YOU?"
 # response = gets.chomp
 
 # until response == "BYE"
@@ -198,22 +198,70 @@
 
 # ~~~~~~~~~~~~~~~~Lab Problem 3~~~~~~~~~~~~~~~~~~
 
+# Add on to the above. Grandma really loves your company and doesn’t want you to go unless you shout BYE three times in a row. 
+# So if you say BYE twice and then something else you have to say BYE three times again.
 
 puts "HELLO SON! WHAT'S UP?"
 response = gets.chomp
 goodbye = 0
 
-while goodbye < 2
+while goodbye < 3
 	year = rand(1930..1980)
 	if response == "BYE"
 		puts "WHAT?"
 		goodbye += 1
+    	if goodbye < 3
+      		puts "HUH?!, SPEAK UP SONNY!"
+    	else
+      		puts "GOODBYE!"
+    	end
 	elsif response == response.upcase
 		puts "NO NOT SINCE #{year}"
-		goodbye -= goodbye
+		goodbye = 0
 	else
 		puts "HUH?!, SPEAK UP SONNY!"
-		goodbye -= goodbye
+		goodbye = 0
 	end
-	response = gets.chomp
+  response = gets.chomp
 end
+
+# ~~~~~~~~~~~~~~Gold Problems~~~~~~~~~~~~~~~~~~
+
+# def price_of_gold(oz)
+# 	price = oz * 1092
+# 	puts price
+# end
+
+# def price_of_gold_from_pounds(pounds)
+# 	amount = pounds.to_f * 16
+# 	price_of_gold(amount)
+# end
+
+# price_of_gold_from_pounds(30)
+
+
+# def price_of_gold_from_kilograms(kilograms)
+# 	amount = kilograms.to_f * 35.274
+# 	price_of_gold(amount)
+# end
+
+# price_of_gold_from_kilograms(30)
+
+# ~~~~~~~~~~~~~Interesting Methods~~~~~~~~~~~~~~
+
+# # string method: center
+
+# "Stefan".center(18, 444)
+
+# # integer method: round
+
+# 1.round(2)
+
+# 25.round(-1)
+
+
+
+
+
+
+
