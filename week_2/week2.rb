@@ -201,20 +201,32 @@
 # Add on to the above. Grandma really loves your company and doesn’t want you to go unless you shout BYE three times in a row. 
 # So if you say BYE twice and then something else you have to say BYE three times again.
 
+# puts "TALK TO ME! SO LONELY!\n\n"
+# bye = 0
+# while bye < 3
+#   response = gets.chomp
+#   if response == "BYE"
+#     puts "STAY AWHILE!?!"
+#     bye = (bye+1)
+#   elsif response == response.upcase
+#     puts "NO! NOT SINCE #{1910+rand(41)}!"
+#     bye = 0
+#   else
+#     puts "Huh?! I CAN'T HEAR YOU!"
+#     bye = 0
+#   end
+# end
+
+
 puts "HELLO SON! WHAT'S UP?"
-response = gets.chomp
 goodbye = 0
 
-while goodbye < 3
+while goodbye != 3 
+	response = gets.chomp
 	year = rand(1930..1980)
 	if response == "BYE"
 		puts "WHAT?"
 		goodbye += 1
-    	if goodbye < 3
-      		puts "HUH?!, SPEAK UP SONNY!"
-    	else
-      		puts "GOODBYE!"
-    	end
 	elsif response == response.upcase
 		puts "NO NOT SINCE #{year}"
 		goodbye = 0
@@ -222,7 +234,6 @@ while goodbye < 3
 		puts "HUH?!, SPEAK UP SONNY!"
 		goodbye = 0
 	end
-  response = gets.chomp
 end
 
 # ~~~~~~~~~~~~~~Gold Problems~~~~~~~~~~~~~~~~~~
