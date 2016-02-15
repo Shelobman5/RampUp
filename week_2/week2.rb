@@ -29,9 +29,9 @@
 # 	name = gets.chomp
 # 	if name == "Stefan"
 # 		puts "YES!"
-# 		elsif name == "Peter"
+# 	elsif name == "Peter"
 # 			puts "Last name Jackson?"
-# 		else
+# 	else
 # 			puts "No way!!"
 # 	end
 # end
@@ -89,7 +89,7 @@
 # age = 15
 # case
 # when age == 15
-#     					puts "I’m 15 too!"
+#     					  puts "I’m 15 too!"
 # when age == 14
 #    					  puts "You’re one year younger than me"
 # when age == 16
@@ -111,25 +111,25 @@
 
 # ~~~~~~~~~~~~~~~~~~~~~Number Guessing Game~~~~~~~~~~~~~~~~~~~~~
 
-# num = rand(1..100)
-# num_guesses = 0
+num = rand(1..100)
+num_guesses = 0
 
-# puts "I'm thinking of a number betweeen 1 and 100."
+puts "I'm thinking of a number betweeen 1 and 100."
 
 
-# loop do
-# 	puts "Can you guess which number I'm thinking of?"
-# 	guess = gets.chomp.to_i
-# 	num_guesses += 1
-# 	if guess > num
-# 		puts "Too high!"
-# 	elsif guess < num 
-# 		puts "Too low!"
-# 	else
-# 		puts "You've got it!"
-# 	end
-# 	break if num_guesses == 5
-# end
+loop do
+	puts "Can you guess which number I'm thinking of?"
+	guess = gets.chomp.to_i
+	num_guesses += 1
+	if guess > num
+		puts "Too high! That is guess #{num_guesses}!"
+	elsif guess < num 
+		puts "Too low! That is guess #{num_guesses}!"
+	else
+		puts "You've got it!"
+	end
+	break if num_guesses == 5 || guess == num
+end
 
 # ~~~~~~~~~~~~~~~~Lab Problem 1~~~~~~~~~~~~~~~~~~
 
@@ -218,23 +218,23 @@
 # end
 
 
-puts "HELLO SON! WHAT'S UP?"
-goodbye = 0
+# puts "HELLO SON! WHAT'S UP?"
+# goodbye = 0
 
-while goodbye != 3 
-	response = gets.chomp
-	year = rand(1930..1980)
-	if response == "BYE"
-		puts "WHAT?"
-		goodbye += 1
-	elsif response == response.upcase
-		puts "NO NOT SINCE #{year}"
-		goodbye = 0
-	else
-		puts "HUH?!, SPEAK UP SONNY!"
-		goodbye = 0
-	end
-end
+# while goodbye != 3 
+# 	response = gets.chomp
+# 	year = rand(1930..1980)
+# 	if response == "BYE"
+# 		puts "WHAT?"
+# 		goodbye += 1
+# 	elsif response == response.upcase
+# 		puts "NO NOT SINCE #{year}"
+# 		goodbye = 0
+# 	else
+# 		puts "HUH?!, SPEAK UP SONNY!"
+# 		goodbye = 0
+# 	end
+# end
 
 # ~~~~~~~~~~~~~~Gold Problems~~~~~~~~~~~~~~~~~~
 

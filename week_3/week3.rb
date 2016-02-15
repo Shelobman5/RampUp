@@ -53,14 +53,17 @@ def cipher(string, num)
 	new_word = ""
 
 	string.each_char do |i|
-		if !alphabet.include?(i) # If there is a character not found in the alphabet arrays, go up a character
+		if !alphabet.include?(i) # If there is a character not found in the alphabet arrays, keep it
 			new_word += i 
 		else
 			new_word += alphabet[alphabet.index(i) - num] # Find the character in the alphabet array and subtract the given num to create the new_word
 		end
 	end
 
-	return new_word.downcase.capitalize 
+	return new_word.upcase.capitalize
+
 end
 
 puts cipher("Ruby is fun!", 18)
+
+
